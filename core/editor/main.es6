@@ -9,7 +9,7 @@ import Plugins from './plugins';
 import Visor from '../visor/main';
 import Scorm from '../scorm/main';
 import i18n from './../../locales/i18n';
-
+import { stateTFG } from '../store/demotfg';
 const Config = process.env.DOC === "doc" ? NoServerConfig :
     process.env.NODE_ENV === "production" ? ProductionConfig : DevConfig;
 
@@ -23,5 +23,5 @@ export default {
     Visor: Visor,
     Scorm: Scorm,
     i18n: i18n,
-    InitialState: InitialState(Config),
+    InitialState: stateTFG,
 };
